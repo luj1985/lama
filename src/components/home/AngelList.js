@@ -5,18 +5,16 @@ require('./Angel.scss')
 class AngelList extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      filter : () => true
-    }
+    this.state = { filter : () => true }
   }
   displayAll() {
-    this.setState({filter : () => true});
+    this.setState({ filter : () => true });
   }
   displayCondition1() {
-    this.setState({filter : item => item.condition === 1 });
+    this.setState({ filter : d => d.condition === 1 });
   }
   displayCondition2() {
-    this.setState({ filter : item => item.condition === 2 });
+    this.setState({ filter : d => d.condition === 2 });
   }
   render() {
     var angels = this.props.angels.filter(this.state.filter);
@@ -26,7 +24,7 @@ class AngelList extends React.Component {
         <div className="angel-filters">
           <button onClick={this.displayAll.bind(this)}>All</button>
           <button onClick={this.displayCondition1.bind(this)}>Condition 1</button>
-          <button onClick={this.displayCondition2.bind(this)}>Condition 1</button>
+          <button onClick={this.displayCondition2.bind(this)}>Condition 2</button>
         </div>
         <ul>
         {angels.map((angel, i) =>

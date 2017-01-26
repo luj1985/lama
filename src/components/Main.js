@@ -10,6 +10,26 @@ import Contact from 'components/home/Contact';
 import Footer from 'components/home/Footer';
 import FadeInUpSection from './FadeInUpSection';
 
+let modules = [{
+  title : 'Home',
+  href : '#'
+}, {
+  title : 'Intro',
+  href : '#intro'
+}, {
+  title : 'Angel List',
+  href : '#angels'
+}, {
+  title : 'Team',
+  href : '#team'
+}, {
+  title : 'Contact',
+  href : '#contact'
+}, {
+  title : 'Press',
+  href : '#press'
+}];
+
 let angels = {
   title : 'Angel List',
   angels: [
@@ -80,7 +100,7 @@ class AppComponent extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <Navigator />
+        <Navigator modules={modules}/>
         <Masthead />
         <FadeInUpSection>
           <Introduction {...intro} />
