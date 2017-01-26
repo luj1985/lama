@@ -16,7 +16,8 @@ class FadeInUpSection extends React.Component {
       <VisibilitySensor
         scrollCheck
         scrollDelay={50}
-        minTopValue={10}
+        minTopValue={50}
+        partialVisibility = {true}
         onChange={this.onChange.bind(this)}>
         <section className={this.state.isVisible ? 'animated fadeInUp' : 'before-animate'}>
         {this.props.children}
