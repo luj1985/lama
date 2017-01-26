@@ -13,12 +13,12 @@ import FadeInUpSection from './FadeInUpSection';
 let angels = {
   title : 'Angel List',
   angels: [
-    { name: 'Purse.io', url: 'https://purse.io', logo: '/images/angel-logos/purse.jpg'},
-    { name: 'Yours network', url: 'https://www.yours.network', logo: '/images/angel-logos/yours.jpg'},
-    { name: 'Unocoin', url: 'https://www.unocoin.com', logo: '/images/angel-logos/unocoin.jpg'},
-    { name: 'BitPagos', url: 'https://www.bitpagos.com/', logo: '/images/angel-logos/bitpagos.png'},
-    { name: 'PopChest', url: 'https://popchest.com/', logo: '/images/angel-logos/popchest.png'},
-    { name: 'Bitso', url: 'https://bitso.com/', logo: '/images/angel-logos/bitso.png'}
+    { name: 'Purse.io',       condition: 2, url: 'https://purse.io',          logo: '/images/angel-logos/purse.jpg'},
+    { name: 'Yours network',  condition: 1, url: 'https://www.yours.network', logo: '/images/angel-logos/yours.jpg'},
+    { name: 'Unocoin',        condition: 2, url: 'https://www.unocoin.com',   logo: '/images/angel-logos/unocoin.jpg'},
+    { name: 'BitPagos',       condition: 1, url: 'https://www.bitpagos.com/', logo: '/images/angel-logos/bitpagos.png'},
+    { name: 'PopChest',       condition: 1, url: 'https://popchest.com/',     logo: '/images/angel-logos/popchest.png'},
+    { name: 'Bitso',          condition: 1, url: 'https://bitso.com/',        logo: '/images/angel-logos/bitso.png'}
   ]
 };
 

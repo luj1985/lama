@@ -42,6 +42,7 @@
 }
 
 $base-color: rgb(85,85,85);
+$black: #1d2025;
 
 
 
@@ -90,6 +91,9 @@ ul.menu {
 }
 
 
+.section:nth-child(even) {
+  background-color: $black;
+}
 
 .before-animate {
   opacity: 0;

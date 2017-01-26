@@ -1,7 +1,12 @@
 #angels ul{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.angel-filters {
+  text-align: center;
 }
 
 .angel {
@@ -14,6 +19,7 @@
   width: 100px;
   height: 120px;
   background-color: white;
+  margin: 1rem 2.4rem;
 
   img {
     margin-top: 1rem;
