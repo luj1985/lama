@@ -1,0 +1,32 @@
+#angels ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#angels {
+  background-color: #1d2025;
+}
+
+
+.angel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  border: 1px solid gray;
+  width: 100px;
+  height: 120px;
+  background-color: white;
+
+  img {
+    margin-top: 1rem;
+    width: 48px;
+    height: 48px;
+  }
+  a {
+    text-align: center;
+    width: 100px;
+  }
+}

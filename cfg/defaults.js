@@ -42,6 +42,10 @@ function getDefaultModules() {
     }, {
       test: /\.(mp4|ogg|svg)$/,
       loader: 'file-loader'
+    }, {
+      test: /\.(woff|woff2|eot|ttf|svg)$/,
+      exclude: /node_modules/,
+      loader: 'url-loader?limit=1024&name=fonts/[name].[ext]'
     }]
   };
 }

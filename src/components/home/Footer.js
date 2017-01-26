@@ -1,9 +1,15 @@
 import React from 'react';
 
+require('./Footer.scss')
+
 class Footer extends React.Component {
   render() {
     return (
-      <footer>Footer Section, include copyrights</footer>
+      <footer id="footer">
+        <div className="content">
+          Huiyin Blockchain copyright;
+        </div>
+      </footer>
     )
   }
 }

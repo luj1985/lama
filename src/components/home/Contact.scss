@@ -1,0 +1,18 @@
+#site-message {
+  width: 400px;
+  input, textarea{
+    appearance: none;
+    width: 100%;
+    padding: .5rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin-bottom: 1rem;
+  }
+}
+
+#contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

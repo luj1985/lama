@@ -1,9 +1,21 @@
 import React from 'react';
 
+require('./Contact.scss')
+
 class Contact extends React.Component {
   render() {
     return (
-      <section>Contact Section</section>
+      <section className="content">
+        <h3>Contact Us</h3>
+        <div id="contact">
+          <div id="site-message">
+            <form>
+              <input type="text" placeholder="Title" />
+              <textarea rows="10" placeholder="Submit your content here" />
+            </form>
+          </div>
+        </div>
+      </section>
     )
   }
 }
