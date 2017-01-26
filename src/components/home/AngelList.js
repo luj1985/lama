@@ -6,7 +6,7 @@ class AngelList extends React.Component {
   render() {
     return (
       <div id="angels" className="content">
-        <h3>Angel List</h3>
+        <h3>{this.props.title}</h3>
         <p style={{textAlign:'center'}}>Add filter here ..........</p>
         <hr />
         <ul>

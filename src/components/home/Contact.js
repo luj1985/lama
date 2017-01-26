@@ -6,7 +6,7 @@ class Contact extends React.Component {
   render() {
     return (
       <section className="content">
-        <h3>Contact Us</h3>
+        <h3>{this.props.title}</h3>
         <div id="contact">
           <div id="site-message">
             <form>
