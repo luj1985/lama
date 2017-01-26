@@ -66,9 +66,8 @@
     "animate.css": "^3.5.2",
     "core-js": "^2.0.0",
     "react": "^15.4.2",
+    "react-visibility-sensor": "^3.6.2",
     "react-addons-css-transition-group": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-scroll": "^1.4.5",
-    "react-visibility-sensor": "^3.6.2"
+    "react-dom": "^15.4.2"
   }
 }

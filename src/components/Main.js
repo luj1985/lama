@@ -8,6 +8,7 @@ import AngelList from 'components/home/AngelList';
 import Team from 'components/home/Team';
 import Contact from 'components/home/Contact';
 import Footer from 'components/home/Footer';
+import FadeInUpSection from './FadeInUpSection';
 
 let angels = [
   { name: 'Purse.io', url: 'https://purse.io', logo: '/images/angel-logos/purse.jpg'},
@@ -58,9 +59,15 @@ class AppComponent extends React.Component {
       <div className="wrapper">
         <Navigator />
         <Masthead />
-        <Introduction />
-        <AngelList angels={angels} />
-        <Team team={team}/>
+        <FadeInUpSection>
+          <Introduction />
+        </FadeInUpSection>
+        <FadeInUpSection>
+          <AngelList angels={angels} />
+        </FadeInUpSection>
+        <FadeInUpSection>
+          <Team team={team}/>
+        </FadeInUpSection>
         <Contact />
         <Footer />
       </div>

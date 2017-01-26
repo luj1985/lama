@@ -5,7 +5,7 @@ require('./Team.scss')
 class Team extends React.Component {
   render() {
     return (
-      <section className="content">
+      <div className="content">
         <h3>Team</h3>
         <div className="team">
           {this.props.team.map((person, i) =>
@@ -15,7 +15,7 @@ class Team extends React.Component {
             </div>
           )}
         </div>
-      </section>
+      </div>
     )
   }
 }
