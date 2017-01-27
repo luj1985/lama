@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router'
+
 let NAVIGATOR_HEIGHT = 64;
 
 require('./Navigator.scss');
@@ -36,11 +38,11 @@ class Navigator extends React.Component {
               </svg>
               <h1>Huiyin Blockchain Venture</h1>
             </div>
-            <ul className="menu">
+            <ul className="menu" role="nav">
               {this.props.modules.map((m, i) => {
                 return (
                   <li key={i}>
-                    <a href={m.href}>{m.title}</a>
+                    <Link to={m.href}>{m.title}</Link>
                   </li>
                 )
               })}

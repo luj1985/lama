@@ -2,15 +2,12 @@ import React from 'react';
 
 require('./Masthead.scss')
 
-class Masthead extends React.Component {
+export default class Masthead extends React.Component {
   render() {
     return (
-      <section id="masthead">
-        <h2>Huiyin Blockchain Venture</h2>
+      <section id="masthead" style={{backgroundImage: `url(${this.props.background})`}}>
+        <h2>{this.props.title}</h2>
       </section>
     )
   }
 }
-
-
-export default Masthead;

@@ -19,7 +19,7 @@ class AngelList extends React.Component {
   render() {
     var angels = this.props.angels.filter(this.state.filter);
     return (
-      <div id="angels" className="content">
+      <div className="content">
         <h3>{this.props.title}</h3>
         <div className="angel-filters">
           <button onClick={this.displayAll.bind(this)}>All</button>

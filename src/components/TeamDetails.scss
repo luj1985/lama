@@ -1,0 +1,23 @@
+#team-details main {
+  display: flex;
+  flex-direction: row;
+
+  aside {
+    padding: 0 1rem;
+    border-right: 1px solid gray;
+  }
+  section {
+    padding: 0 1rem;
+  }
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    line-height: 2rem;
+
+    &.active {
+      color: red;
+    }
+  }
+}

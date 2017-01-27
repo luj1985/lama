@@ -1,7 +1,7 @@
 import React from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 
-class FadeInUpSection extends React.Component {
+export default class FadeInUpSection extends React.Component {
   constructor(props) {
     super(props)
     this.state = { isVisible : false }
@@ -19,12 +19,10 @@ class FadeInUpSection extends React.Component {
         minTopValue={50}
         partialVisibility = {true}
         onChange={this.onChange.bind(this)}>
-        <section className={this.state.isVisible ? 'section animated fadeInUp' : 'section before-animate'}>
+        <section {...this.props} className={this.state.isVisible ? 'section animated fadeInUp' : 'section before-animate'}>
         {this.props.children}
         </section>
       </VisibilitySensor>
     )
   }
 }
-
-export default FadeInUpSection

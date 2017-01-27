@@ -1,35 +1,18 @@
 require('styles/App.scss');
 
 import React from 'react';
-import Navigator from 'components/home/Navigator';
+import Layout from './Layout'
 import Masthead from 'components/home/Masthead';
 import Introduction from 'components/home/Introduction';
 import AngelList from 'components/home/AngelList';
 import Team from 'components/home/Team';
 import Contact from 'components/home/Contact';
-import Footer from 'components/home/Footer';
 import FadeInUpSection from './FadeInUpSection';
 
-let modules = [{
-  title : 'Home',
-  href : '#'
-}, {
-  title : 'Intro',
-  href : '#intro'
-}, {
-  title : 'Angel List',
-  href : '#angels'
-}, {
-  title : 'Team',
-  href : '#team'
-}, {
-  title : 'Contact',
-  href : '#contact'
-}, {
-  title : 'Press',
-  href : '#press'
-}];
-
+let masthead = {
+  title : 'Huiyin Blockchain Venture',
+  background : '/images/background.jpg'
+}
 let angels = {
   title : 'Angel List',
   angels: [
@@ -59,34 +42,42 @@ let team = {
   title : 'Team',
   team : [{
     name: 'James Wo',
+    identity: 'James_Wo',
     title: 'President, Huiyin Blockchain Venture',
     thumb: '/images/thumbs/James_Wo.jpg'
   }, {
     name: 'William Hou',
+    identity: 'William_Hou',
     title: 'CEO, Huiyin Blockchain Venture',
     thumb: '/images/thumbs/William_Hou.jpg'
   }, {
     name: 'Freddy Zheng',
+    identity: 'Freddy_Zheng',
     title: 'VP, Management Huiyin Blockchain Venture',
     thumb: '/images/thumbs/Freddy_Zhang.jpg'
   }, {
     name: 'Shang Zhang',
+    identity: 'Shang_Zhang',
     title: 'Senior Associate, Huiyin Blockchain Venture',
     thumb: '/images/thumbs/Shang_Zhang.jpg'
   }, {
     name: 'Daphne Zhang',
+    identity: 'Daphne_Zhang',
     title: 'Senior Associate, Huiyin Blockchain Venture',
     thumb: '/images/thumbs/Daphne_Zhang.jpg'
   }, {
     name: 'Rose Gao',
+    identity: 'Rose_Gao',
     title: 'Associate, Huiyin Blockchain Venture',
     thumb: '/images/thumbs/Rose_Gao.jpg'
   }, {
     name: 'Amy Zhu',
+    identity: 'Amy_Zhu',
     title: 'HR, Huiyin Blockchain Venture',
     thumb: '/images/thumbs/Amy_Zhu.jpg'
   }, {
     name: 'Andrew Lee',
+    identity: 'Andrew_Lee',
     title: 'CEO at Purse, Advisor at Huiyin Blockchain Venture',
     thumb: '/images/thumbs/Andrew_Lee.jpg'
   }]
@@ -96,28 +87,33 @@ let contactUs = {
   title : 'Contact Us'
 }
 
-class AppComponent extends React.Component {
+class HomeComponent extends React.Component {
+  // TODO: move model fetch into AJAX call
+  constructor(props) {
+    super(props);
+    this.state = {
+      masthead, angels, intro, team, contactUs
+    }
+  }
   render() {
     return (
-      <div className="wrapper">
-        <Navigator modules={modules}/>
-        <Masthead />
-        <FadeInUpSection>
-          <Introduction {...intro} />
+      <Layout>
+        <Masthead {...this.state.masthead} />
+        <FadeInUpSection id="introduction">
+          <Introduction {...this.state.intro} />
         </FadeInUpSection>
-        <FadeInUpSection>
-          <AngelList {...angels} />
+        <FadeInUpSection id="angels">
+          <AngelList {...this.state.angels} />
         </FadeInUpSection>
-        <FadeInUpSection>
-          <Team {...team}/>
+        <FadeInUpSection id="teams">
+          <Team {...this.state.team}/>
         </FadeInUpSection>
-        <FadeInUpSection>
-          <Contact {...contactUs}/>
+        <FadeInUpSection id="contacts">
+          <Contact {...this.state.contactUs}/>
         </FadeInUpSection>
-        <Footer />
-      </div>
+      </Layout>
     );
   }
 }
 
-export default AppComponent;
+export default HomeComponent;

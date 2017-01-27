@@ -1,14 +1,12 @@
-#angels ul{
+#angels ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-
 .angel-filters {
   text-align: center;
 }
-
 .angel {
   display: flex;
   flex-direction: column;
