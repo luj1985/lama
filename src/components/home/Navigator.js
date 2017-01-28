@@ -5,53 +5,54 @@ let NAVIGATOR_HEIGHT = 64;
 
 require('./Navigator.scss');
 
-class Navigator extends React.Component {
-  constructor() {
-    super()
-    this.state = { style : 'normal' }
+export default class Navigator extends React.Component {
+  constructor(props) {
+    super(props);
+    if (props.active) {
+      this.state = { style : 'active fixed' };
+    } else {
+      this.state = { style : 'normal' };
+      let resizeNavigator = this.resizeNavigator.bind(this);
+      this.componentDidMount = () => {
+        window.addEventListener('scroll', resizeNavigator);
+      }
+      this.componentWillUnmount = () => {
+        window.removeEventListener('scroll', resizeNavigator);
+      };
+    }
   }
-  componentDidMount() {
-    this.resizeNavigator = function() {
-      var offset = window.pageYOffset;
-      var style = (offset > NAVIGATOR_HEIGHT) ? 'active' : 'normal';
-      this.setState({ style : style });
-    }.bind(this);
-    window.addEventListener('scroll', this.resizeNavigator);
-  }
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.resizeNavigator);
+  resizeNavigator() {
+    var offset = window.pageYOffset;
+    var style = (offset > NAVIGATOR_HEIGHT) ? 'active' : 'normal';
+    this.setState({ style : style });
   }
   render() {
     return (
       <section id="navbar" className={this.state.style}>
-        <header>
-          <div className="content">
-            <div id="logo">
-              <svg width="64px" height="64px">
-                <path d="
-                M 32,0 A 32,32 0 0 1 32,64 A 32,32 0 0 1 32,0 Z
-                M 52.50609665440987,52.50609665440987 A 29,29 0 0 0 32,3 Z
-                M 32,3 A 29,29 0 0 0 11.493903345590123,52.50609665440987 Z
-                M 11.493903345590123,52.50609665440987 A 29,29 0 0 0 52.50609665440987,52.50609665440987
-                L 32,42.25304832720494 Z">
-                </path>
-              </svg>
-              <h1>Huiyin Blockchain Venture</h1>
-            </div>
-            <ul className="menu" role="nav">
-            {this.props.modules.map((m, i) => {
-              return (
-                <li key={i}>
-                  <Link to={m.href}>{m.title}</Link>
-                </li>
-              )
-            })}
-            </ul>
+        <header className="content">
+          <div id="logo">
+            <svg width="64px" height="64px">
+              <path d="
+              M 32,0 A 32,32 0 0 1 32,64 A 32,32 0 0 1 32,0 Z
+              M 52.50609665440987,52.50609665440987 A 29,29 0 0 0 32,3 Z
+              M 32,3 A 29,29 0 0 0 11.493903345590123,52.50609665440987 Z
+              M 11.493903345590123,52.50609665440987 A 29,29 0 0 0 52.50609665440987,52.50609665440987
+              L 32,42.25304832720494 Z">
+              </path>
+            </svg>
+            <h1>Huiyin Blockchain Venture</h1>
           </div>
+          <ul className="menu" role="nav">
+          {this.props.modules.map((m, i) => {
+            return (
+              <li key={i}>
+                <Link to={m.href}>{m.title}</Link>
+              </li>
+            )
+          })}
+          </ul>
         </header>
       </section>
     )
   }
 }
-
-export default Navigator;

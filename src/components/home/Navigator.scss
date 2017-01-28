@@ -9,7 +9,7 @@ $header-active-bg: rgba(0, 0, 0, .82);
   transition: background-color ease-in-out 200ms;
   z-index: 100;
 
-  header .content {
+  header.content {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,23 +17,25 @@ $header-active-bg: rgba(0, 0, 0, .82);
     padding: 1rem 0;
     transition: padding ease-in-out 200ms;
   }
-
   .menu {
     text-transform: uppercase;
   }
 }
-
+.active.fixed ~ .content {
+  padding-top: 5rem;
+}
 #navbar.active {
   background-color: $header-active-bg;
-  header .content {
+
+  header.content {
     padding: 0.5rem 0;
   }
 }
-
 #logo {
   display: flex;
   flex-direction: row;
   align-items: center;
+
   path {
     fill: $red;
   }

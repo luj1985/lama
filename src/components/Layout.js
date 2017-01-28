@@ -4,7 +4,7 @@ import Footer from './home/Footer';
 
 let modules = [{
   title : 'Home',
-  href : '/'
+  href : '/#masthead'
 }, {
   title : 'Intro',
   href : '/#introduction'
@@ -24,9 +24,12 @@ let modules = [{
 
 export default class Layout extends React.Component {
   render() {
+    // detail page doesn't have any background image/color
+    // mark navigator with dark color, otherwise the menu item is invisible
+    let isDetailPage = !!this.props.detail;
     return (
       <div className="wrapper">
-        <Navigator modules={modules}/>
+        <Navigator active={isDetailPage} modules={modules}/>
         { this.props.children }
         <Footer />
       </div>

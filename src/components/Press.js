@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Layout from './Layout';
-import _ from 'lodash';
 
 require('./Press.scss');
 
@@ -60,7 +59,7 @@ export default class Press extends React.Component {
     let filter = FILTERS[type] || (() => true);
     let presses = PRESSES.filter(filter);
     return (
-      <Layout>
+      <Layout detail={true}>
         <section className="content">
           <h3>Press List</h3>
           <div className="tabs">

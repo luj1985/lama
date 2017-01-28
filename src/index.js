@@ -9,7 +9,7 @@ import { render } from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router';
 import { smoothScroll } from './components/SmoothScroll';
 
-function getNavigatorHeight() {
+function calculateNavigatorHeight() {
   var el = document.querySelector('#navbar');
   if (el) {
     // navigator header size can vary when scroll to different position
@@ -31,7 +31,7 @@ function anchorScroll() {
     setTimeout(() => {
       const el = document.getElementById(id);
       if (el) {
-        const offset = getNavigatorHeight();
+        const offset = calculateNavigatorHeight();
         smoothScroll(el, { duration : 250, offset : -offset });
       }
     })
