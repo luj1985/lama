@@ -12,8 +12,11 @@ import { smoothScroll } from './components/SmoothScroll';
 function getNavigatorHeight() {
   var el = document.querySelector('#navbar');
   if (el) {
-    var height = window.getComputedStyle(el).height;
-    return parseFloat(height);
+    // navigator header size can vary when scroll to different position
+    //
+    // var height = window.getComputedStyle(el).height;
+    // return parseFloat(height, 10);
+    return 84;
   }
   return 0;
 }
@@ -34,11 +37,12 @@ function anchorScroll() {
     })
   }
 }
+
 render((
   <Router history={browserHistory} onUpdate={anchorScroll}>
     <Route path="/" component={Home}/>
     <Route path="/team/:name" components={TeamDetails} />
-    <Route path="/presses" components={Press} />
+    <Route path="/presses(/:type)" components={Press} />
     <Route path="*" component={NoMatch} />
   </Router>
 ), document.getElementById('app'));
