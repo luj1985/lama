@@ -39,13 +39,13 @@ class Navigator extends React.Component {
               <h1>Huiyin Blockchain Venture</h1>
             </div>
             <ul className="menu" role="nav">
-              {this.props.modules.map((m, i) => {
-                return (
-                  <li key={i}>
-                    <Link to={m.href}>{m.title}</Link>
-                  </li>
-                )
-              })}
+            {this.props.modules.map((m, i) => {
+              return (
+                <li key={i}>
+                  <Link to={m.href}>{m.title}</Link>
+                </li>
+              )
+            })}
             </ul>
           </div>
         </header>

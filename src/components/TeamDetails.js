@@ -69,7 +69,7 @@ class TeamDetails extends React.Component {
                 this.state.team.map((person, i) => {
                   return (
                     <li key={i} className={this.state.index === i ? 'active' : ''}>
-                      <Link to={ "/team/" + person.identity }>{person.name}</Link>
+                      <Link to={ '/team/' + person.identity }>{person.name}</Link>
                     </li>
                   )
                 })
