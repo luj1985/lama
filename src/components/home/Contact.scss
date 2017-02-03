@@ -1,7 +1,9 @@
 #contacts .content {
 }
 #site-message {
-  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   input, textarea {
     appearance: none;
@@ -11,5 +13,14 @@
     border: none;
     border-bottom: 1px solid gray;
     margin-bottom: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
+    border: 2px solid #E00000;
+    outline: none;
+    padding: 0.5rem 1.5rem;
+    color: black;
+    background-color: white;
   }
 }
