@@ -1,3 +1,26 @@
 #footer {
   background-color: #1d2025;
+  color: rgba(255, 255, 255, 0.72);
+  position: relative;
+
+
+  a {
+    color: white;
+    text-decoration: none;
+    margin: 0.5rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
