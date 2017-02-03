@@ -60,15 +60,14 @@ class TeamDetails extends React.Component {
     }
     let current = this.state.team[index];
     return (
-      <Layout>
+      <Layout detail={true}>
         <div id="team-details" className="content">
-          <h3>This is team details</h3>
           <main>
             <aside>
               <ul>{
                 this.state.team.map((person, i) => {
                   return (
-                    <li key={i} className={this.state.index === i ? 'active' : ''}>
+                    <li key={i} className={index === i ? 'active' : ''}>
                       <Link to={ '/team/' + person.identity }>{person.name}</Link>
                     </li>
                   )

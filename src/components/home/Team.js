@@ -4,12 +4,39 @@ import { Link } from 'react-router';
 require('./Team.scss')
 
 class Team extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filter : (d) => d.identity !== 'Andrew_Lee',
+      active : 0
+    };
+  }
+  selectOurTeam() {
+    this.setState({
+      filter: (d) => d.identity !== 'Andrew_Lee',
+      active: 0
+    });
+  }
+  selectAdvisors() {
+    this.setState({
+      filter: (d) => d.identity === 'Andrew_Lee',
+      active: 1
+    });
+  }
   render() {
+    const team = this.props.team.filter(this.state.filter);
+
     return (
       <div className="content">
         <h3>{this.props.title}</h3>
+
+        <ul className="team-filter">
+          <li className={this.state.active === 0 ? 'active' : ''} onClick={this.selectOurTeam.bind(this)}>Our team</li>
+          <li className={this.state.active === 1 ? 'active' : ''} onClick={this.selectAdvisors.bind(this)}>Board Advisors</li>
+        </ul>
+
         <div className="team">
-          {this.props.team.map((person, i) =>
+          {team.map((person, i) =>
             <div key={i} className="person">
               <Link to={'/team/' + person.identity}>
                 <img src={person.thumb} />
