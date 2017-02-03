@@ -49,6 +49,7 @@ p {
   width: 980px;
   margin: 0 auto;
   padding: 2rem 0 4rem 0;
+  position: relative;
 }
 ul.menu {
   padding: 0;
@@ -68,8 +69,20 @@ ul.menu {
     }
   }
 }
+.section {
+  a {
+    color: $black;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 .section:nth-child(even) {
   background-color: $black;
+  h3 {
+    color: white;
+  }
 }
 .before-animate {
   opacity: 0;

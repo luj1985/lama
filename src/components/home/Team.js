@@ -11,8 +11,10 @@ class Team extends React.Component {
         <div className="team">
           {this.props.team.map((person, i) =>
             <div key={i} className="person">
-              <img src={person.thumb} />
-              <h4><Link to={'/team/' + person.identity}>{person.name}</Link></h4>
+              <Link to={'/team/' + person.identity}>
+                <img src={person.thumb} />
+                <h4>{person.name}</h4>
+              </Link>
             </div>
           )}
         </div>
