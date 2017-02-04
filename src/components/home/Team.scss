@@ -28,8 +28,51 @@
     list-style: none;
     display: inline-block;
     border-bottom: 2px solid lightgray;
+    cursor: pointer;
     &.active {
       border-bottom: 2px solid #E00000;
+    }
+  }
+}
+
+.tabs {
+  display: flex;
+  .tab {
+    list-style: none;
+    border-bottom: 2px solid lightgray;
+    &.active {
+      border-color: #E00000;
+    }
+    a {
+      text-decoration: none;
+      color: #1d2025;
+    }
+  }
+}
+
+ul.press {
+  li {
+    list-style: none;
+    margin-top: 2rem;
+  }
+  .reference {
+    margin-bottom: .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .logo {
+    width: 150px;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+  a {
+    text-decoration: none;
+    color: #1d2025;
+    line-height: 2rem;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

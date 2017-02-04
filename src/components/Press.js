@@ -61,16 +61,23 @@ export default class Press extends React.Component {
     return (
       <Layout detail={true}>
         <section className="content">
-          <h3>Press List</h3>
-          <div className="tabs">
-            <Link to={'/presses/global'}>Global</Link>
-            <Link to={'/presses/state'}>State</Link>
-          </div>
+          <ul className="tabs">
+            <li className={type === 'global' ? 'tab active' : 'tab'}>
+              <Link to={'/presses/global'}>Global</Link>
+            </li>
+            <li className={type === 'state' ? 'tab active' : 'tab'}>
+              <Link to={'/presses/state'}>State</Link>
+            </li>
+          </ul>
           <main>
-          <ul>
+          <ul className="press">
           { presses.map((press, i) => {
             return (
               <li key={i}>
+                <div className="reference">
+                  <div className="logo" style={{backgroundImage : `url(${press.logo})`}}></div>
+                  <span>{press.date}</span>
+                </div>
                 <a href={press.href} target="_blank">{press.title}</a>
               </li>
             )
