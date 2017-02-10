@@ -28,7 +28,7 @@ class Team extends React.Component {
 
     return (
       <div className="content">
-        <h3>{this.props.title}</h3>
+        <h3><span className="title">{this.props.title}</span></h3>
 
         <ul className="team-filter">
           <li className={this.state.active === 0 ? 'active' : ''} onClick={this.selectOurTeam.bind(this)}>Our team</li>

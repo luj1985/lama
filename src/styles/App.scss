@@ -104,3 +104,16 @@ ul.menu {
 .fadeInUp {
   animation-name: fadeInUp;
 }
+
+
+
+.title {
+  position: relative;
+  &:before {
+    content : '';
+    position: absolute;
+    border-bottom: 2px solid #E00000;
+    width: 100%;
+    transform: translateY(2.5rem);
+  }
+}

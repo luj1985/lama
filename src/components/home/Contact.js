@@ -10,7 +10,7 @@ class Contact extends React.Component {
   render() {
     return (
       <section className="content">
-        <h3>{this.props.title}</h3>
+        <h3><span className="title">{this.props.title}</span></h3>
         <div id="site-message">
           <form onSubmit={this.handleSubmit.bind(this)}>
             <input type="text" placeholder="Name" />
