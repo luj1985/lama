@@ -15,23 +15,11 @@
   }
 }
 
-#angels ul {
+#angels .list {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
-
-  li {
-    list-style: none;
-    position: relative;
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: inherit;
-      height: inherit;
-    }
-  }
 }
 
 .angel {
@@ -42,10 +30,13 @@
   background-color: white;
   margin: 0;
 
-  img {
+  .my-logo {
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: inherit;
+    height: inherit;
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    background-position: center center;
     z-index: 5;
   }
   h4 {

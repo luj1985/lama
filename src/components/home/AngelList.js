@@ -22,12 +22,10 @@ class AngelList extends React.Component {
           index = this.state.active;
 
     const items = angels.map((angel, i) =>
-      <li className="angel" key={i}>
-        <a target="_blank" href={angel.url}>
-          <img src={angel.logo} />
-          <h4>{angel.name}</h4>
-        </a>
-      </li>
+      <a className="angel" key={i} target="_blank" href={angel.url}>
+        <div className="my-logo" style={{ 'background-image' : 'url(' + angel.logo + ')'}}></div>
+        <h4>{angel.name}</h4>
+      </a>
     );
     return (
       <div className="content">
@@ -38,7 +36,8 @@ class AngelList extends React.Component {
           <button className={index === 2 ? 'active' : ''}  onClick={this.displayCondition2.bind(this)}>Condition 2</button>
         </div>
         <ReactCSSTransitionGroup
-          component="ul"
+          component="div"
+          className="list"
           transitionName="example"
           transitionAppear={true}
           transitionAppearTimeout={500}
