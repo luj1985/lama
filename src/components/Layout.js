@@ -15,11 +15,11 @@ let modules = [{
   title : 'Team',
   href : '/#teams'
 }, {
-  title : 'Contact',
-  href : '/#contacts'
-}, {
   title : 'Press',
   href : '/presses'
+}, {
+  title : 'Contact',
+  href : '/#contacts'
 }];
 
 export default class Layout extends React.Component {
