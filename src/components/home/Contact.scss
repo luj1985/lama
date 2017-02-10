@@ -24,3 +24,17 @@
     background-color: white;
   }
 }
+
+
+#contacts {
+  background-color: white;
+  h3 {
+    color: #555555;
+  }
+
+  input, textarea {
+    &:focus {
+      border-bottom: 2px solid #E00000;
+    }
+  }
+}

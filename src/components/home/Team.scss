@@ -30,7 +30,7 @@
     top: 0;
     transform: translateX(-300px);
     transition: transform ease-in-out 250ms;
-    padding: 1rem;
+    padding: 3rem 1rem;
   }
 
   &:hover {
@@ -48,14 +48,18 @@
   li {
     display: flex;
     flex-grow: 1;
-    padding: 1rem;
     text-align: center;
     list-style: none;
     display: inline-block;
     border-bottom: 2px solid lightgray;
     cursor: pointer;
+    position: relative;
     &.active {
       border-bottom: 2px solid #E00000;
+    }
+    a {
+      display: block;
+      line-height: 3rem;
     }
   }
 }
