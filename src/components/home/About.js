@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Introduction extends React.Component {
+class About extends React.Component {
   render() {
     return (
       <div className="content" style={{textAlign: 'center'}}>
@@ -11,4 +11,4 @@ class Introduction extends React.Component {
   }
 }
 
-export default Introduction;
+export default About;

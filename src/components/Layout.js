@@ -6,8 +6,8 @@ let modules = [{
   title : 'Home',
   href : '/#masthead'
 }, {
-  title : 'Intro',
-  href : '/#introduction'
+  title : 'About',
+  href : '/#about'
 }, {
   title : 'Angel List',
   href : '/#angels'

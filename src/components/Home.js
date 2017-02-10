@@ -3,7 +3,7 @@ require('styles/App.scss');
 import React from 'react';
 import Layout from './Layout'
 import Masthead from 'components/home/Masthead';
-import Introduction from 'components/home/Introduction';
+import About from 'components/home/About';
 import AngelList from 'components/home/AngelList';
 import Team from 'components/home/Team';
 import Contact from 'components/home/Contact';
@@ -26,7 +26,7 @@ let angels = {
 };
 
 let intro = {
-  title : 'Introduction',
+  title : 'About',
   description: `<p>Huiyin Blockchain Venture is a premier firm that partners with innovative start-ups and entrepreneurs to help
   them grow and define the future of the blockchain economy. We provide strategic investment to bring pioneering
   blockchain technology ideas to life and to scale in a number of areas, including infrastructure, exchange, payment,
@@ -99,8 +99,8 @@ class HomeComponent extends React.Component {
     return (
       <Layout>
         <Masthead {...this.state.masthead} />
-        <FadeInUpSection id="introduction">
-          <Introduction {...this.state.intro} />
+        <FadeInUpSection id="about">
+          <About {...this.state.intro} />
         </FadeInUpSection>
         <FadeInUpSection id="angels">
           <AngelList {...this.state.angels} />
