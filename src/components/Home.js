@@ -44,42 +44,50 @@ let team = {
     name: 'James Wo',
     identity: 'James_Wo',
     title: 'President, Huiyin Blockchain Venture',
-    thumb: '/images/thumbs/James_Wo.jpg'
+    thumb: '/images/thumbs/James_Wo.jpg',
+    avatar: '/images/avatars/James_Wo.jpg'
   }, {
     name: 'William Hou',
     identity: 'William_Hou',
     title: 'CEO, Huiyin Blockchain Venture',
-    thumb: '/images/thumbs/William_Hou.jpg'
+    thumb: '/images/thumbs/William_Hou.jpg',
+    avatar: '/images/avatars/William_Hou.jpg'
   }, {
     name: 'Freddy Zheng',
     identity: 'Freddy_Zheng',
     title: 'VP, Management Huiyin Blockchain Venture',
-    thumb: '/images/thumbs/Freddy_Zhang.jpg'
+    thumb: '/images/thumbs/Freddy_Zhang.jpg',
+    avatar: '/images/avatars/Freddy_Zhang.jpg'
   }, {
     name: 'Shang Zhang',
     identity: 'Shang_Zhang',
     title: 'Senior Associate, Huiyin Blockchain Venture',
-    thumb: '/images/thumbs/Shang_Zhang.jpg'
+    thumb: '/images/thumbs/Shang_Zhang.jpg',
+    avatar: '/images/avatars/Shang_Zhang.jpg'
   }, {
     name: 'Daphne Zhang',
     identity: 'Daphne_Zhang',
     title: 'Senior Associate, Huiyin Blockchain Venture',
-    thumb: '/images/thumbs/Daphne_Zhang.jpg'
+    thumb: '/images/thumbs/Daphne_Zhang.jpg',
+    avatar: '/images/avatars/Daphne_Zhang.jpg'
   }, {
     name: 'Rose Gao',
     identity: 'Rose_Gao',
     title: 'Associate, Huiyin Blockchain Venture',
-    thumb: '/images/thumbs/Rose_Gao.jpg'
+    thumb: '/images/thumbs/Rose_Gao.jpg',
+    avatar: '/images/avatars/Rose_Gao.jpg'
   }, {
     name: 'Amy Zhu',
     identity: 'Amy_Zhu',
     title: 'HR, Huiyin Blockchain Venture',
-    thumb: '/images/thumbs/Amy_Zhu.jpg'
+    thumb: '/images/thumbs/Amy_Zhu.jpg',
+    avatar: '/images/avatars/Amy_Zhu.jpg'
   }, {
     name: 'Andrew Lee',
     identity: 'Andrew_Lee',
     title: 'CEO at Purse, Advisor at Huiyin Blockchain Venture',
-    thumb: '/images/thumbs/Andrew_Lee.jpg'
+    thumb: '/images/thumbs/Andrew_Lee.jpg',
+    avatar: '/images/avatars/Andrew_Lee.jpg'
   }]
 }
 

@@ -23,7 +23,7 @@ class AngelList extends React.Component {
 
     const items = angels.map((angel, i) =>
       <a className="angel" key={i} target="_blank" href={angel.url}>
-        <div className="my-logo" style={{ 'background-image' : 'url(' + angel.logo + ')'}}></div>
+        <div className="my-logo" style={{ 'backgroundImage' : 'url(' + angel.logo + ')'}}></div>
         <h4>{angel.name}</h4>
       </a>
     );
