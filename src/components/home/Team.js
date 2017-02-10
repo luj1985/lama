@@ -31,8 +31,12 @@ class Team extends React.Component {
         <h3><span className="title">{this.props.title}</span></h3>
 
         <ul className="team-filter">
-          <li className={this.state.active === 0 ? 'active' : ''} onClick={this.selectOurTeam.bind(this)}>Our team</li>
-          <li className={this.state.active === 1 ? 'active' : ''} onClick={this.selectAdvisors.bind(this)}>Board Advisors</li>
+          <li className={this.state.active === 0 ? 'active' : ''}>
+            <a onClick={this.selectOurTeam.bind(this)}>Our team</a>
+          </li>
+          <li className={this.state.active === 1 ? 'active' : ''}>
+            <a onClick={this.selectAdvisors.bind(this)}>Board Advisors</a>
+          </li>
         </ul>
 
         <div className="team">
