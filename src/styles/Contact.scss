@@ -1,40 +1,74 @@
-#contacts .content {
-}
-#site-message {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@import 'variables';
 
+.huiyin-form {
+  width: 480px;
+  box-sizing: border-box;
   input, textarea {
     appearance: none;
-    width: 100%;
+    width: 460px;
     padding: .5rem;
     outline: none;
     border: none;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #DDD;
     margin-bottom: 1rem;
   }
 
   button {
     font-size: 1rem;
-    border: 2px solid #E00000;
+    border: 2px solid $huiyin-red;
     outline: none;
     padding: 0.5rem 1.5rem;
     color: black;
     background-color: white;
-  }
-}
-
-
-#contacts {
-  background-color: white;
-  h3 {
-    color: #555555;
+    cursor: pointer;
   }
 
   input, textarea {
+    margin: 1rem 0;
     &:focus {
-      border-bottom: 2px solid #E00000;
+      border-bottom: 2px solid $huiyin-red;
     }
   }
+}
+
+.contact-form {
+  composes : huiyin-form;
+}
+
+.message {
+  position: relative;
+  box-sizing: border-box;
+  background-color: white;
+
+  padding: 3rem;
+  flex-grow: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+
+.contact {
+  flex-grow: 1;
+  padding: 3rem;
+  background-color: $huiyin-red;
+  margin-left: 1rem;
+  color: $huiyin-white;
+  li {
+    list-style: none;
+  }
+  a {
+    color: $huiyin-white;
+    line-height: 2.5rem;
+  }
+  height: 240px;
+}
+
+
+.icon {
+  width: 2rem;
+  display: inline-block;
 }
