@@ -12,8 +12,8 @@
 .person {
   background-color: green;
   overflow: hidden;
-  width: 240px;
-  height: 320px;
+  width: 210px;
+  height: 280px;
   position: relative;
 
   img {
@@ -23,6 +23,9 @@
 
   h2 {
     margin-bottom: 3rem;
+  }
+  h3 {
+    line-height: 1.5rem;
   }
 
   a {
