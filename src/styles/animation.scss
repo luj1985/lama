@@ -16,6 +16,10 @@
   }
 }
 
+:global(.fadeInUp) {
+  transition: opacity 500ms ease-in;
+}
+
 :global(.fade-enter ){
   opacity: 0.01;
 }

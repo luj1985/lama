@@ -21,7 +21,7 @@ export default class fadeSection extends React.Component {
         minTopValue={50}
         partialVisibility = {true}
         onChange={this.onChange.bind(this)}>
-        <section id={id} className={this.state.isVisible ? (base + ' animated fade') : (base + ' before-animate')}>
+        <section id={id} className={this.state.isVisible ? (base + ' animated fadeInUp') : (base + ' before-animate')}>
         {this.props.children}
         </section>
       </VisibilitySensor>
