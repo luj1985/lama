@@ -106,7 +106,7 @@ class HomeComponent extends React.Component {
   render() {
     return (
       <Layout>
-        <Masthead {...this.state.masthead} />
+        <Masthead id="masthead" {...this.state.masthead} />
         <FadeInUpSection id="about">
           <About {...this.state.intro} />
         </FadeInUpSection>

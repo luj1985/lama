@@ -27,7 +27,7 @@ class Team extends React.Component {
     const team = this.props.team.filter(this.state.filter);
 
     return (
-      <div className="content">
+      <div {...this.props} className="content">
         <h3><span className="title">{this.props.title}</span></h3>
 
         <ul className="team-filter">

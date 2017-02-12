@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
-require('./Angel.scss')
+let styles = require('./Angel.scss');
 
 class AngelList extends React.Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class AngelList extends React.Component {
       </a>
     );
     return (
-      <div className="content">
+      <div {...this.props} className="content">
         <h3><span className="title">{this.props.title}</span></h3>
         <div className="angel-filters">
           <button className={index === 0 ? 'active' : ''} onClick={this.displayAll.bind(this)}>All</button>

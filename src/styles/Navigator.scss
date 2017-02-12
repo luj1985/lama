@@ -1,0 +1,60 @@
+@import 'variables';
+
+.normal {
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  transition: background-color ease-in-out $huiyin-ease-time;
+  z-index: 100;
+  box-sizing: border-box;
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    transition: padding ease-in-out $huiyin-ease-time;
+  }
+
+  a {
+    color: $huiyin-white;
+  }
+}
+
+.active {
+  composes: normal;
+  background-color: $huiyin-white;
+  box-shadow: rgba(0,0,0,0.3) 0px 2px 5px 0px;
+  header {
+    padding: 0.5rem 0;
+  }
+  a {
+    color: rgba(0,0,0, 0.8);
+  }
+}
+
+.menu {
+  text-transform: uppercase;
+  font-size: 11px;
+  li {
+    display: inline-block;
+    margin: 1rem;
+    list-style: none;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  path {
+    fill: $red;
+  }
+  h1 {
+    color: $red;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+}

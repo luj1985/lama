@@ -3,13 +3,13 @@ import { Link } from 'react-router'
 
 let NAVIGATOR_HEIGHT = 64;
 
-require('./Navigator.scss');
+const styles = require('../../styles/Navigator.scss');
 
 export default class Navigator extends React.Component {
   constructor(props) {
     super(props);
     if (props.active) {
-      this.state = { style : 'active fixed' };
+      this.state = { style : 'active' };
     } else {
       this.state = { style : 'normal' };
       let resizeNavigator = this.resizeNavigator.bind(this);
@@ -27,10 +27,11 @@ export default class Navigator extends React.Component {
     this.setState({ style : style });
   }
   render() {
+    const style = this.state.style;
     return (
-      <section id="navbar" className={this.state.style}>
-        <header className="content">
-          <div id="logo">
+      <section {...this.props} className={styles[style]}>
+        <header>
+          <div className={styles.logo}>
             <svg width="64px" height="64px">
               <path d="
               M 32,0 A 32,32 0 0 1 32,64 A 32,32 0 0 1 32,0 Z
@@ -42,7 +43,7 @@ export default class Navigator extends React.Component {
             </svg>
             <h1>Huiyin Blockchain Venture</h1>
           </div>
-          <ul className="menu" role="nav">
+          <ul className={styles.menu} role="nav">
           {this.props.modules.map((m, i) => {
             return (
               <li key={i}>
