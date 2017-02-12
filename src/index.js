@@ -1,10 +1,6 @@
 // @flow
 
 
-
-
-require('font-awesome/scss/font-awesome.scss');
-
 import React from 'react';
 import Home from './components/Home';
 import TeamDetails from './components/TeamDetails';

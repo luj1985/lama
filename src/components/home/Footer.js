@@ -1,17 +1,18 @@
 import React from 'react';
+import {Icon} from 'react-fa'
 
-require('../../styles/Footer.scss')
+const styles = require('../../styles/Footer.scss')
 
 class Footer extends React.Component {
   render() {
     return (
-      <footer id="footer">
-        <div className="content">
+      <footer className={styles.footer}>
+        <div className="container">
           <span>© 2017 Huiyin Blockchain Venture</span>
-          <div className="social-media">
-            <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
-            <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="#"><i className="fa fa-twitter" aria-hidden="true"></i></a>
+          <div className={styles.social}>
+            <a href="#"><Icon name="linkedin" /></a>
+            <a href="#"><Icon name="facebook" /></a>
+            <a href="#"><Icon name="twitter" /></a>
           </div>
         </div>
       </footer>

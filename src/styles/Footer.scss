@@ -1,8 +1,10 @@
-#footer {
+
+
+.footer {
   background-color: #1d2025;
   color: rgba(255, 255, 255, 0.72);
   position: relative;
-
+  padding-top: 2rem;
 
   a {
     color: white;
@@ -10,7 +12,6 @@
     margin: 0.5rem;
     border: 1px solid white;
     border-radius: 50%;
-    display: inline-block;
     width: 30px;
     height: 30px;
     display: flex;
@@ -18,7 +19,7 @@
     justify-content: center;
   }
 }
-.social-media {
+.social {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
