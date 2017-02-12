@@ -45,7 +45,6 @@ class Team extends React.Component {
               <Link className="description" to={'/team/' + person.identity}>
                 <h3>{person.name}</h3>
                 <h4>{person.title}</h4>
-                <p>Person abstract list here ...</p>
               </Link>
               <img src={person.avatar} />
             </div>
