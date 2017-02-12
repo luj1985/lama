@@ -63,6 +63,9 @@
   a {
     color: $huiyin-white;
     line-height: 2.5rem;
+    &:hover {
+      color: $huiyin-white;
+    }
   }
   height: 240px;
 }
