@@ -13,6 +13,7 @@ export default class fadeSection extends React.Component {
   }
   render() {
     const base = this.props.dark ? 'section dark ' : 'section';
+    const id = this.props.id;
     return (
       <VisibilitySensor
         scrollCheck
@@ -20,7 +21,7 @@ export default class fadeSection extends React.Component {
         minTopValue={50}
         partialVisibility = {true}
         onChange={this.onChange.bind(this)}>
-        <section className={this.state.isVisible ? (base + ' animated fade') : (base + ' before-animate')}>
+        <section id={id} className={this.state.isVisible ? (base + ' animated fade') : (base + ' before-animate')}>
         {this.props.children}
         </section>
       </VisibilitySensor>

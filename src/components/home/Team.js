@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 const styles = require('../../styles/Team.scss')
+const COLUMNS = 3;
 
 class Team extends React.Component {
   constructor(props) {
@@ -25,31 +27,50 @@ class Team extends React.Component {
   }
   render() {
     const team = this.props.team.filter(this.state.filter);
+    const filters = [{
+      text : 'Our team',
+      action : this.selectOurTeam
+    }, {
+      text : 'Board Advisors',
+      action : this.selectAdvisors
+    }];
+
+    const width = 100 / COLUMNS;
 
     return (
       <div className="container">
         <h1>{this.props.title}</h1>
 
-        <ul className="team-filter">
-          <li className={this.state.active === 0 ? 'active' : ''}>
-            <a onClick={this.selectOurTeam.bind(this)}>Our team</a>
-          </li>
-          <li className={this.state.active === 1 ? 'active' : ''}>
-            <a onClick={this.selectAdvisors.bind(this)}>Board Advisors</a>
-          </li>
+        <ul className={styles.filters}>{
+          filters.map((d, i) => {
+            const type = this.state.active === i ? 'selected' : 'normal';
+            return (
+              <li key={i} className={styles[type]}>
+                <a onClick={d.action.bind(this)}>{d.text}</a>
+              </li>
+            )
+          })}
         </ul>
-
-        <div className={styles.team}>
+        <ReactCSSTransitionGroup
+          component="div"
+          className={styles.angels}
+          transitionName="fade"
+          transitionAppear={true}
+          transitionAppearTimeout={300}
+          transitionEnterTimeout={300}
+          transitionLeaveTimeout={100}>
           {team.map((person, i) =>
-            <div key={i} className={styles.person}>
-              <Link className={styles.description} to={'/team/' + person.identity}>
-                <h2>{person.name}</h2>
-                <h3>{person.title}</h3>
-              </Link>
-              <img src={person.avatar} />
+            <div key={i} className={styles.member} style={{ width : width + '%' }}>
+              <div className={styles.person}>
+                <Link className={styles.description} to={'/team/' + person.identity}>
+                  <h2>{person.name}</h2>
+                  <h3>{person.title}</h3>
+                </Link>
+                <img src={person.avatar} />
+              </div>
             </div>
           )}
-        </div>
+        </ReactCSSTransitionGroup>
       </div>
     )
   }
