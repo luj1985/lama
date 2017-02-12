@@ -5,12 +5,13 @@
 }
 
 :global(.section) {
+  padding: 2rem 0;
   h1 {
     position: relative;
     font-size: 1.625rem;
     text-align: center;
     text-transform: uppercase;
-    margin: 3rem auto 2rem auto;
+    margin-bottom: 2rem;
 
     &:after {
       content : '';
@@ -21,4 +22,21 @@
       left: calc(50% - 35px);
     }
   }
+}
+
+:global(.dark) {
+  background-color: $huiyin-black;
+}
+
+
+:global(.dark.section h1) {
+  color: $huiyin-white;
+  &:after {
+    border-color: $huiyin-white;
+  }
+}
+
+
+:global(.light) {
+  background-color: white;
 }

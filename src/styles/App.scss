@@ -18,6 +18,7 @@ body {
 a {
   text-decoration: none;
   transition: color ease-in-out $huiyin-ease-time;
+  color: $huiyin-base-color;
   &:hover {
     color: $huiyin-red;
   }

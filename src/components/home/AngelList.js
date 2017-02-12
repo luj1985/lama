@@ -2,6 +2,7 @@ import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 const styles = require('../../styles/Angel.scss');
+const COLUMNS = 6;
 
 class AngelList extends React.Component {
   constructor(props) {
@@ -21,25 +22,14 @@ class AngelList extends React.Component {
     const angels = this.props.angels.filter(this.state.filter),
           index = this.state.active;
 
-    let filters = [{
-      text: 'All',
-      action: this.displayAll
-    }, {
-      text: 'Condition 1',
-      action: this.displayCondition1
-    }, {
-      text : 'Condition 2',
-      action: this.displayCondition2
-    }
-
+    let filters = [
+      { text: 'All', action: this.displayAll },
+      { text: 'Condition 1', action: this.displayCondition1 },
+      { text: 'Condition 2', action: this.displayCondition2 }
     ];
 
-    const items = angels.map((angel, i) =>
-      <a className="angel" key={i} target="_blank" href={angel.url}>
-        <div className="my-logo" style={{ 'backgroundImage' : 'url(' + angel.logo + ')'}}></div>
-        <h4>{angel.name}</h4>
-      </a>
-    );
+    const width = 100 / COLUMNS;
+
     return (
       <div className="container">
         <h1>{this.props.title}</h1>
@@ -52,12 +42,23 @@ class AngelList extends React.Component {
         <ReactCSSTransitionGroup
           component="div"
           className={styles.angels}
-          transitionName="example"
+          transitionName="fade"
           transitionAppear={true}
-          transitionAppearTimeout={500}
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}>
-          {items}
+          transitionAppearTimeout={200}
+          transitionEnterTimeout={200}
+          transitionLeaveTimeout={100}>{
+            angels.map((angel, i) => {
+              const left = (width * i) + '%';
+              return (
+                <div key={angel.url} className={styles.angel} style={{ left: left, width: width + '%' }}>
+                  <a target="_blank" href={angel.url}>
+                    <div className={styles.logo} style={{ 'backgroundImage' : 'url(' + angel.logo + ')'}}></div>
+                    <h2>{angel.name}</h2>
+                  </a>
+                </div>
+              )
+            }
+          )}
         </ReactCSSTransitionGroup>
       </div>
     )

@@ -110,7 +110,7 @@ class HomeComponent extends React.Component {
         <FadeInUpSection id="about">
           <About {...this.state.intro} />
         </FadeInUpSection>
-        <FadeInUpSection id="angels">
+        <FadeInUpSection id="angels" dark>
           <AngelList {...this.state.angels} />
         </FadeInUpSection>
         <FadeInUpSection id="teams">

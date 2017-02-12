@@ -1,7 +1,7 @@
 import React from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 
-export default class FadeInUpSection extends React.Component {
+export default class fadeSection extends React.Component {
   constructor(props) {
     super(props)
     this.state = { isVisible : false }
@@ -12,6 +12,7 @@ export default class FadeInUpSection extends React.Component {
     }
   }
   render() {
+    const base = this.props.dark ? 'section dark ' : 'section';
     return (
       <VisibilitySensor
         scrollCheck
@@ -19,7 +20,7 @@ export default class FadeInUpSection extends React.Component {
         minTopValue={50}
         partialVisibility = {true}
         onChange={this.onChange.bind(this)}>
-        <section {...this.props} className={this.state.isVisible ? 'section animated fadeInUp' : 'section before-animate'}>
+        <section className={this.state.isVisible ? (base + ' animated fade') : (base + ' before-animate')}>
         {this.props.children}
         </section>
       </VisibilitySensor>
