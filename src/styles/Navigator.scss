@@ -13,7 +13,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: .5rem 0;
     transition: padding ease-in-out $huiyin-ease-time;
   }
 
@@ -27,10 +27,10 @@
   background-color: $huiyin-white;
   box-shadow: rgba(0,0,0,0.3) 0px 2px 5px 0px;
   header {
-    padding: 0.5rem 0;
+    padding: 0rem 0;
   }
   a {
-    color: rgba(0,0,0, 0.8);
+    color: $huiyin-black;
   }
 }
 
@@ -48,6 +48,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-left: 1rem;
 
   path {
     fill: $red;

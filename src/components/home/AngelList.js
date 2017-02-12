@@ -28,7 +28,7 @@ class AngelList extends React.Component {
       </a>
     );
     return (
-      <div {...this.props} className="content">
+      <div className="content">
         <h3><span className="title">{this.props.title}</span></h3>
         <div className="angel-filters">
           <button className={index === 0 ? 'active' : ''} onClick={this.displayAll.bind(this)}>All</button>

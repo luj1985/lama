@@ -3,8 +3,8 @@
 @import 'variables';
 @import 'fonts';
 
-:global(.content) {
-  width: 980px;
+:global(.container) {
+  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem 0 4rem 0;
   position: relative;
@@ -24,28 +24,28 @@ body {
   margin: 0;
   color: $base-color;
 }
+
 a {
   text-decoration: none;
+  transition: color ease-in-out $huiyin-ease-time;
   &:hover {
     color: $huiyin-red;
   }
 }
-h1 {
-
-}
+h1 { }
 h2, h3 {
   font-family: "Roboto Slab", serif;
 }
 
-ul {
-  padding: 0;
-}
 p {
   font-family: 'Raleway', sans-serif;
   line-height: 2rem;
   font-size: 1rem;
 }
 
+ul {
+  padding: 0;
+}
 ul.menu {
   padding: 0;
   color: white;
