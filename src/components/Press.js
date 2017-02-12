@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import Layout from './Layout';
 
-require('./Press.scss');
+const styles = require('../styles/Press.scss');
 
 const PRESSES = [{
   title: 'BitPagos, now Ripio, lands $1.9M to promote financial inclusion in South America using bitcoin',
@@ -60,8 +60,8 @@ export default class Press extends React.Component {
     let presses = PRESSES.filter(filter);
     return (
       <Layout detail={true}>
-        <section className="content">
-          <ul className="tabs">
+        <section className="container">
+          <ul className={styles.tabs}>
             <li className={type === 'global' ? 'tab active' : 'tab'}>
               <Link to={'/presses/global'}>Global</Link>
             </li>
@@ -69,20 +69,21 @@ export default class Press extends React.Component {
               <Link to={'/presses/state'}>State</Link>
             </li>
           </ul>
-          <main>
-          <ul className="press">
-          { presses.map((press, i) => {
-            return (
-              <li key={i}>
-                <div className="reference">
-                  <div className="logo" style={{backgroundImage : `url(${press.logo})`}}></div>
-                  <span>{press.date}</span>
-                </div>
-                <a href={press.href} target="_blank">{press.title}</a>
-              </li>
-            )
-          })}
-          </ul>
+          <main className={styles.main}>
+            <ul> {
+              presses.map((press, i) => {
+                return (
+                  <li key={i}>
+                    <div className={styles.reference}>
+                      <div className={styles.logo} style={{backgroundImage : `url(${press.logo})`}}></div>
+                      <span>{press.date}</span>
+                    </div>
+                    <a href={press.href} target="_blank">{press.title}</a>
+                  </li>
+                )
+              })
+            }
+            </ul>
           </main>
         </section>
       </Layout>
