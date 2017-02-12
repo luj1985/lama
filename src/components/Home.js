@@ -11,7 +11,7 @@ import FadeInUpSection from './FadeInUpSection';
 
 let masthead = {
   title : 'Huiyin Blockchain Venture',
-  background : '/images/background.jpg'
+  background : '/images/background1.jpg'
 }
 let angels = {
   title : 'Angel List',
