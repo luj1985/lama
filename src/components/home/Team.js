@@ -57,10 +57,9 @@ class Team extends React.Component {
           transitionName="fade"
           transitionAppear={true}
           transitionAppearTimeout={300}
-          transitionEnterTimeout={300}
-          transitionLeaveTimeout={100}>
+          transitionLeaveTimeout={300}>
           {team.map((person, i) =>
-            <div key={i} className={styles.member} style={{ width : width + '%' }}>
+            <div key={person.name} className={styles.member} style={{ width : width + '%' }}>
               <div className={styles.person}>
                 <Link className={styles.description} to={'/team/' + person.identity}>
                   <h2>{person.name}</h2>
