@@ -1,0 +1,24 @@
+:global(.container) {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+}
+
+:global(.section) {
+  h1 {
+    position: relative;
+    font-size: 1.625rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 3rem auto 2rem auto;
+
+    &:after {
+      content : '';
+      position: absolute;
+      bottom: -1rem;
+      border-bottom: 2px solid $huiyin-red;
+      width: 70px;
+      left: calc(50% - 35px);
+    }
+  }
+}

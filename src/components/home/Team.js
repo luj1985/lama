@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-require('./Team.scss')
+const styles = require('../../styles/Team.scss')
 
 class Team extends React.Component {
   constructor(props) {
@@ -27,8 +27,8 @@ class Team extends React.Component {
     const team = this.props.team.filter(this.state.filter);
 
     return (
-      <div className="content">
-        <h3><span className="title">{this.props.title}</span></h3>
+      <div className="container">
+        <h1>{this.props.title}</h1>
 
         <ul className="team-filter">
           <li className={this.state.active === 0 ? 'active' : ''}>
@@ -39,12 +39,12 @@ class Team extends React.Component {
           </li>
         </ul>
 
-        <div className="team">
+        <div className={styles.team}>
           {team.map((person, i) =>
-            <div key={i} className="person">
-              <Link className="description" to={'/team/' + person.identity}>
-                <h3>{person.name}</h3>
-                <h4>{person.title}</h4>
+            <div key={i} className={styles.person}>
+              <Link className={styles.description} to={'/team/' + person.identity}>
+                <h2>{person.name}</h2>
+                <h3>{person.title}</h3>
               </Link>
               <img src={person.avatar} />
             </div>

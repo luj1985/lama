@@ -1,0 +1,35 @@
+:global(.before-animate){
+  opacity: 0;
+}
+:global(.animated) {
+  animation-duration: 450ms;
+  animation-fill-mode: both;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+:global(.faceIn-enter ){
+  opacity: 0.01;
+}
+
+:global(.faceIn-enter.faceIn-enter-active) {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+:global(.faceIn-leave) {
+  opacity: 1;
+}
+
+:global(.faceIn-leave.faceIn-leave-active) {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}

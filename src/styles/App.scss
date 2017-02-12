@@ -2,19 +2,9 @@
 
 @import 'variables';
 @import 'fonts';
+@import 'global';
+@import 'animation';
 
-:global(.container) {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem 0 4rem 0;
-  position: relative;
-  h3 {
-    font-size: 1.625rem;
-    text-align: center;
-  }
-}
-:global(.section) {
-}
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -32,6 +22,7 @@ a {
     color: $huiyin-red;
   }
 }
+
 h1 { }
 h2, h3 {
   font-family: "Roboto Slab", serif;
@@ -45,64 +36,4 @@ p {
 
 ul {
   padding: 0;
-}
-ul.menu {
-  padding: 0;
-  color: white;
-
-  li {
-    list-style-type: none;
-    display: inline;
-    padding: 0.5rem 1rem;
-  }
-  a {
-    text-decoration: none;
-    color: white;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-.section:nth-child(even) {
-  background-color: $black;
-  h3 {
-    color: white;
-  }
-}
-.title {
-  position: relative;
-
-  &:before {
-    content : '';
-    position: absolute;
-    border-bottom: 2px solid #E00000;
-    bottom: 0;
-    width: 50%;
-  }
-}
-
-.content > h3 {
-  text-transform: uppercase;
-}
-
-
-
-
-.before-animate {
-  opacity: 0;
-}
-.animated {
-  animation-duration: 450ms;
-  animation-fill-mode: both;
-}
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 20px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
 }

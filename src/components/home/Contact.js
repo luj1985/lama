@@ -1,6 +1,6 @@
 import React from 'react';
 
-require('./Contact.scss')
+require('../../styles/Contact.scss')
 
 class Contact extends React.Component {
   handleSubmit(e) {
@@ -10,7 +10,7 @@ class Contact extends React.Component {
   render() {
     return (
       <section className="content">
-        <h3><span className="title">{this.props.title}</span></h3>
+        <h1><span className="title">{this.props.title}</span></h1>
         <div id="site-message">
           <form onSubmit={this.handleSubmit.bind(this)}>
             <input type="text" placeholder="Name" />

@@ -19,19 +19,6 @@
   h4 {
     text-align: center;
   }
-  .description {
-    box-sizing: border-box;
-    position: absolute;
-    width: 210px;
-    height: 280px;
-    background-color: #E00000;
-    opacity: 0.9;
-    color: white;
-    top: 0;
-    transform: translateX(-300px);
-    transition: transform ease-in-out 250ms;
-    padding: 3rem 1rem;
-  }
 
   &:hover {
     .description {
@@ -39,6 +26,20 @@
       text-decoration: none;
     }
   }
+}
+
+.description {
+  box-sizing: border-box;
+  position: absolute;
+  width: 210px;
+  height: 280px;
+  background-color: #E00000;
+  opacity: 0.9;
+  color: white;
+  top: 0;
+  transform: translateX(-300px);
+  transition: transform ease-in-out 250ms;
+  padding: 3rem 1rem;
 }
 
 .team-filter {

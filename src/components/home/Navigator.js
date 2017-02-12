@@ -59,7 +59,7 @@ export default class Navigator extends React.Component {
   render() {
     const type = this.state.style;
     return (
-      <section className={styles[type]}>
+      <section id="navbar" className={styles[type]}>
         <header className="container">
           <div className={styles.logo}>
             <svg width={LOGO_SIZE} height={LOGO_SIZE}>

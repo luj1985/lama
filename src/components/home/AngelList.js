@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
-let styles = require('./Angel.scss');
+const styles = require('../../styles/Angel.scss');
 
 class AngelList extends React.Component {
   constructor(props) {
@@ -21,6 +21,19 @@ class AngelList extends React.Component {
     const angels = this.props.angels.filter(this.state.filter),
           index = this.state.active;
 
+    let filters = [{
+      text: 'All',
+      action: this.displayAll
+    }, {
+      text: 'Condition 1',
+      action: this.displayCondition1
+    }, {
+      text : 'Condition 2',
+      action: this.displayCondition2
+    }
+
+    ];
+
     const items = angels.map((angel, i) =>
       <a className="angel" key={i} target="_blank" href={angel.url}>
         <div className="my-logo" style={{ 'backgroundImage' : 'url(' + angel.logo + ')'}}></div>
@@ -28,16 +41,17 @@ class AngelList extends React.Component {
       </a>
     );
     return (
-      <div className="content">
-        <h3><span className="title">{this.props.title}</span></h3>
-        <div className="angel-filters">
-          <button className={index === 0 ? 'active' : ''} onClick={this.displayAll.bind(this)}>All</button>
-          <button className={index === 1 ? 'active' : ''}  onClick={this.displayCondition1.bind(this)}>Condition 1</button>
-          <button className={index === 2 ? 'active' : ''}  onClick={this.displayCondition2.bind(this)}>Condition 2</button>
+      <div className="container">
+        <h1>{this.props.title}</h1>
+        <div className={styles.filters}>{
+          filters.map((d, i) => {
+            let type = index === i ? 'selected' : 'normal';
+            return (<button key={i} className={styles[type]} onClick={d.action.bind(this)}>{d.text}</button>)
+          })}
         </div>
         <ReactCSSTransitionGroup
           component="div"
-          className="list"
+          className={styles.angels}
           transitionName="example"
           transitionAppear={true}
           transitionAppearTimeout={500}
