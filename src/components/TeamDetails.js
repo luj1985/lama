@@ -1,9 +1,9 @@
-require('./TeamDetails.scss');
-
 import _ from 'lodash';
 import React from 'react';
 import Layout from './Layout';
 import { Link } from 'react-router';
+
+const styles = require('../styles/TeamDetails.scss');
 
 let team = [{
   name: 'James Wo',
@@ -61,8 +61,8 @@ class TeamDetails extends React.Component {
     let current = this.state.team[index];
     return (
       <Layout detail={true}>
-        <div id="team-details" className="content">
-          <main>
+        <div className="container">
+          <main className={styles.details}>
             <aside>
               <ul>{
                 this.state.team.map((person, i) => {

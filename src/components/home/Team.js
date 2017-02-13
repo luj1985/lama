@@ -1,6 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import {Icon} from 'react-fa'
+import {browserHistory} from 'react-router';
+
 
 const styles = require('../../styles/Team.scss')
 const COLUMNS = 3;
@@ -24,6 +26,10 @@ class Team extends React.Component {
       filter: (d) => d.identity === 'Andrew_Lee',
       active: 1
     });
+  }
+  gotoDetail(person) {
+    const link = '/team/' + person.identity;
+    browserHistory.push(link);
   }
   render() {
     const team = this.props.team.filter(this.state.filter);
@@ -58,17 +64,27 @@ class Team extends React.Component {
           transitionAppear={true}
           transitionAppearTimeout={300}
           transitionEnterTimeout={0}
-          transitionLeaveTimeout={300}>
-          {team.map((person) =>
-            <div key={person.name} className={styles.member} style={{ width : width + '%' }}>
-              <div className={styles.person}>
-                <Link className={styles.description} to={'/team/' + person.identity}>
-                  <h2>{person.name}</h2>
-                  <h3>{person.title}</h3>
-                </Link>
-                <img src={person.avatar} />
-              </div>
-            </div>
+          transitionLeaveTimeout={300}>{
+            team.map((person) => {
+              const email = person.email || '';
+              const position = email.indexOf('@');
+              const name = email.substring(0, position);
+              return (
+                <div key={person.name} onClick={() => this.gotoDetail(person)} className={styles.member} style={{ width : width + '%' }}>
+                  <div className={styles.person}>
+                    <section className={styles.description} to={'/team/' + person.identity}>
+                      <h2>{person.name}</h2>
+                      <h3>{person.title}</h3>
+                      <a href={'mailto:' + person.email}>
+                        <span className={styles.icon}><Icon name="envelope" /></span>
+                        <span>{name}</span>
+                      </a>
+                    </section>
+                    <img src={person.avatar} />
+                  </div>
+                </div>
+              )
+            }
           )}
         </ReactCSSTransitionGroup>
       </div>

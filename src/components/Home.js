@@ -11,7 +11,7 @@ import FadeInUpSection from './FadeInUpSection';
 
 let masthead = {
   title : 'Huiyin Blockchain Venture',
-  background : '/images/background1.jpg'
+  background : '/images/background.jpg'
 }
 let angels = {
   title : 'Angel List',
@@ -45,49 +45,57 @@ let team = {
     identity: 'James_Wo',
     title: 'President, Huiyin Blockchain Venture',
     thumb: '/images/thumbs/James_Wo.jpg',
-    avatar: '/images/avatars/James_Wo.jpg'
+    avatar: '/images/avatars/James_Wo.jpg',
+    email: 'woquan@huiyin.com'
   }, {
     name: 'William Hou',
     identity: 'William_Hou',
     title: 'CEO, Huiyin Blockchain Venture',
     thumb: '/images/thumbs/William_Hou.jpg',
-    avatar: '/images/avatars/William_Hou.jpg'
+    avatar: '/images/avatars/William_Hou.jpg',
+    email: 'houtuanzhang@huiyin.com'
   }, {
     name: 'Freddy Zheng',
     identity: 'Freddy_Zheng',
     title: 'VP, Management Huiyin Blockchain Venture',
     thumb: '/images/thumbs/Freddy_Zhang.jpg',
-    avatar: '/images/avatars/Freddy_Zhang.jpg'
+    avatar: '/images/avatars/Freddy_Zhang.jpg',
+    email: 'zhengbing@huiyin.com'
   }, {
     name: 'Shang Zhang',
     identity: 'Shang_Zhang',
     title: 'Senior Associate, Huiyin Blockchain Venture',
     thumb: '/images/thumbs/Shang_Zhang.jpg',
-    avatar: '/images/avatars/Shang_Zhang.jpg'
+    avatar: '/images/avatars/Shang_Zhang.jpg',
+    email: 'zhanghong@huiyin.com'
   }, {
     name: 'Daphne Zhang',
     identity: 'Daphne_Zhang',
     title: 'Senior Associate, Huiyin Blockchain Venture',
     thumb: '/images/thumbs/Daphne_Zhang.jpg',
-    avatar: '/images/avatars/Daphne_Zhang.jpg'
+    avatar: '/images/avatars/Daphne_Zhang.jpg',
+    email: 'zhangxiaolian@huiyin.com'
   }, {
     name: 'Rose Gao',
     identity: 'Rose_Gao',
     title: 'Associate, Huiyin Blockchain Venture',
     thumb: '/images/thumbs/Rose_Gao.jpg',
-    avatar: '/images/avatars/Rose_Gao.jpg'
+    avatar: '/images/avatars/Rose_Gao.jpg',
+    email: 'gaohuimin@huiyin.com'
   }, {
     name: 'Amy Zhu',
     identity: 'Amy_Zhu',
     title: 'HR, Huiyin Blockchain Venture',
     thumb: '/images/thumbs/Amy_Zhu.jpg',
-    avatar: '/images/avatars/Amy_Zhu.jpg'
+    avatar: '/images/avatars/Amy_Zhu.jpg',
+    email: 'zhuxiaojie@huiyin.com'
   }, {
     name: 'Andrew Lee',
     identity: 'Andrew_Lee',
     title: 'CEO at Purse, Advisor at Huiyin Blockchain Venture',
     thumb: '/images/thumbs/Andrew_Lee.jpg',
-    avatar: '/images/avatars/Andrew_Lee.jpg'
+    avatar: '/images/avatars/Andrew_Lee.jpg',
+    email: 'andrew@purse.io'
   }]
 }
 

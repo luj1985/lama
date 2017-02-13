@@ -10,22 +10,27 @@
   width: 100px;
   padding: 0.5rem;
   font-size: 0.8rem;
-  border: 2px solid $huiyin-red;
   outline: none;
   font-weight: bold;
-  background-color: $huiyin-white;
+  background-color: transparent;
+  border: 2px solid transparent;
   transition: all ease-in-out $huiyin-ease-time;
   cursor: pointer;
+  color: $huiyin-white;
 
-  &:hover, &.active {
+  &:hover {
+    border-color: $huiyin-red;
+  }
+
+  &.active {
     background-color: $huiyin-red;
-    color: $huiyin-white;
   }
 }
 
 .selected {
   composes: normal;
   color: $huiyin-white;
+  border: 2px solid $huiyin-red;
   background-color: $huiyin-red;
 }
 
