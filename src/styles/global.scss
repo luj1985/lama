@@ -26,8 +26,9 @@
 
 :global(.dark) {
   background-color: $huiyin-black;
+  background-image: url(/images/background.jpg);
+  background-attachment: fixed;
 }
-
 
 :global(.dark.section h1) {
   color: $huiyin-white;
